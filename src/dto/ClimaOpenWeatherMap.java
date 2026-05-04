@@ -8,7 +8,7 @@ public record ClimaOpenWeatherMap(
         @SerializedName("name")
         String nombre,
         @SerializedName("main")
-        MainTemperatura main,
+        MainTemperatura temp,
         @SerializedName("weather")
         List<Tiempo> condicion
 ) {
