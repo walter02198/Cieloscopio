@@ -10,7 +10,9 @@ public record ClimaOpenWeatherMap(
         @SerializedName("main")
         MainTemperatura temp,
         @SerializedName("weather")
-        List<Tiempo> condicion
+        List<Tiempo> condicion,
+        @SerializedName("rain")
+        RainPrecipitacion prec
 ) {
 
 }
