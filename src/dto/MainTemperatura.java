@@ -8,8 +8,6 @@ public record MainTemperatura(
         @SerializedName("temp_min")
         double temperaturaMinima,
         @SerializedName("temp_max")
-        double temperaturaMaxima,
-        @SerializedName("humidity")
-        double humedad
+        double temperaturaMaxima
 ) {
 }
