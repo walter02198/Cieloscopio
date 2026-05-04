@@ -4,6 +4,7 @@ import model.Clima;
 import repository.ClimaApiClient;
 import repository.IClimaRepository;
 import service.ClimaService;
+import view.IntroducirDatos;
 
 public class Principal {
 
@@ -14,10 +15,10 @@ public class Principal {
 // 2. Instanciamos el servicio y le "inyectamos" el repositorio
         ClimaService climaService = new ClimaService(repository);
 
-// 3. Pedimos el clima (el Service nos devuelve un objeto Model listo)
-        Clima miClima = climaService.obtenerClimaPorCiudad("Buenos Aires");
+// 3. Instanciamos la Vista y le pasamos el Service
+        IntroducirDatos app = new IntroducirDatos(climaService);
 
-// 4. Mostramos el resultado (usando el toString que definiste)
-        System.out.println(miClima);
+// 4. ¡Arrancamos!
+        app.menu();
     }
 }
