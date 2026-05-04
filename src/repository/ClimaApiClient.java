@@ -15,8 +15,10 @@ public class ClimaApiClient implements IClimaRepository {
 
     @Override
     public ClimaOpenWeatherMap consultarClima(String ciudad) {
+        var busquedaCiudad=ciudad.replace(" ","+");
+
         String url = "https://api.openweathermap.org/data/2.5/weather?q="
-                + ciudad + "&appid=" + API_KEY;
+                +busquedaCiudad + "&appid=" + API_KEY;
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
