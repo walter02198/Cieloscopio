@@ -26,6 +26,30 @@ Capa de Dominio (Model): Modelos de objetos puros que representan la entidad "Cl
 
 Capa de Presentación (View): Interfaz de línea de comandos (CLI) para la interacción con el usuario.
 
+```
+src/
+├── principal/     # Puntos de entrada (clases main)
+├── repository/    # Infraestructura — Cliente HTTP y repositorio
+├── dto/           # Objetos de transferencia (Records con GSON)
+├── service/       # Lógica de negocio y transformación
+├── model/         # Objetos de dominio independientes
+├── util/          # Utilidades (DateUtils)
+└── view/          # Presentación — Interfaz de línea de comandos
+```
+
+**Flujo:** `View → Service → Repository (IClimaRepository) → API externa`
+
+## 📁 Estructura de capas
+
+| Capa | Responsabilidad |
+|------|-----------------|
+| **Repository** | Comunicación HTTP con OpenWeatherMap |
+| **DTO** | Mapeo del JSON con Records y `@SerializedName` |
+| **Service** | Transformación de datos y reglas de negocio |
+| **Model** | Entidad `Clima` independiente de la fuente |
+| **View** | Menú CLI e interacción con el usuario |
+
+
 ## 🛠️ Tecnologías utilizadas
 
 
@@ -36,3 +60,7 @@ GSON: Para la deserialización de JSON a objetos Java.
 HttpClient: Para peticiones asíncronas a la API de OpenWeather.
 
 SOLID: Aplicación de principios de diseño orientado a objetos.
+
+## Autor
+
+Walter Valverde
