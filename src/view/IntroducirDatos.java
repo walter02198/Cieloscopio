@@ -49,7 +49,10 @@ public class IntroducirDatos {
                             String ciudad = teclado.nextLine();
                             ejecutarConsulta(ciudad);
                         }
-                        case 7 -> System.out.println("Saliendo del programa Cieloscopio, hasta luego...");
+                        case 7 -> {
+                            System.out.println("Saliendo del programa Cieloscopio, hasta luego...");
+                        teclado.close();
+                        }
                         default -> System.out.println("Opción no válida");
                     }
                 } else {
