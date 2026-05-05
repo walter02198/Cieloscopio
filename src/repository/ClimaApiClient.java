@@ -10,7 +10,7 @@ import java.net.http.HttpResponse;
 
 public class ClimaApiClient implements IClimaRepository {
 
-    private final String API_KEY = "c0cbd1c787c4b8f6e495732a58a9e29a";
+    private final String API_KEY = "apikey";
     private final Gson gson = new Gson();
 
     @Override
